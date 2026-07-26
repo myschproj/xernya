@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dron.ru</title>
+    <style>
+        /* Импорт шрифтов (если у вас есть файлы шрифтов, укажите правильные пути) */
+        @font-face {
+            font-family: 'ZT Neue Relewe';
+            src: url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2'),
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Сбросы и базовая структура */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Чтобы картинки красиво обрезались по краям экрана */
+        }
+
+        /* Название сайта сверху */
+        .top-text {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'ZT Neue Relewe', 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #111111;
+            letter-spacing: 1px;
+            z-index: 10;
+        }
+
+        /* Центральная часть: Меню слева, Слоган справа */
+        .center-content {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            max-width: 1200px;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Левое меню */
+        .menu-box {
+            border: 1px solid #555;
+            border-radius: 12px;
+            padding: 35px 50px;
+            background: #ffffff;
+            text-align: left;
+            min-width: 180px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .menu-item {
+            font-size: 1.1rem;
+            line-height: 2.5;
+            font-weight: 400;
+            text-transform: lowercase;
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            color: #111;
+            transition: opacity 0.3s;
+        }
+
+        .menu-item a:hover {
+            opacity: 0.6;
+        }
+
+        /* Правый текст */
+        .right-slogan {
+            font-family: 'ZT Neue Relewe', 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            text-align: right;
+            color: #111;
+            max-width: 350px;
+        }
+
+        /* Нижняя часть с почтой */
+        .bottom-text {
+            position: absolute;
+            bottom: 50px;
+            text-align: center;
+            z-index: 10;
+            font-size: 0.9rem;
+            color: #333;
+            width: 100%;
+        }
+
+        .bottom-text p {
+            margin-bottom: 8px;
+        }
+
+        .email {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* --- ИЗОБРАЖЕНИЯ В УГЛАХ (ЭЛЕМЕНТЫ) --- */
+        .collage-img {
+            position: absolute;
+            z-index: 1;
+            object-fit: contain;
+        }
+
+        .img-letter {
+            left: -40px;
+            bottom: -30px;
+            width: 350px;
+            transform: rotate(-8deg);
+        }
+
+        .img-pillow-cig {
+            right: -40px;
+            bottom: -30px;
+            width: 380px;
+            transform: rotate(5deg);
+        }
+
+        .img-sketch-watch {
+            right: 0;
+            top: 50px;
+            width: 260px;
+            transform: rotate(-3deg);
+        }
+
+        .img-keyboard-statue {
+            left: 20px;
+            top: 40%;
+            width: 220px;
+            transform: rotate(-8deg);
+        }
+
+        /* --- АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ --- */
+        @media screen and (max-width: 768px) {
+            .collage-img {
+                display: none; /* Скрываем картинки, чтобы не мешать тексту */
+            }
+
+            .center-content {
+                flex-direction: column;
+                width: 90%;
+                text-align: center;
+            }
+
+            .menu-box {
+                text-align: center;
+                padding: 20px 30px;
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 30px;
+            }
+
+            .right-slogan {
+                text-align: center;
+                font-size: 2rem;
+                max-width: 100%;
+            }
+
+            .top-text {
+                top: 20px;
+                font-size: 1rem;
+            }
+
+            .bottom-text {
+                bottom: 15px;
+                font-size: 0.8rem;
+            }
+
+            .email {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <!-- Картинки-коллажи (элементы с ваших скриншотов) -->
+        <img class="collage-img img-letter" src="letter.jpg" alt="Письмо">
+        <img class="collage-img img-pillow-cig" src="pillow-cig.jpg" alt="Подушка и сигареты">
+        <img class="collage-img img-sketch-watch" src="sketch-watch.jpg" alt="Эскиз и часы">
+        <img class="collage-img img-keyboard-statue" src="keyboard-statue.jpg" alt="Клавиатура и статуи">
+
+        <!-- Заголовок сверху -->
+        <div class="top-text">dron.ru</div>
+
+        <!-- Основной контент -->
+        <div class="center-content">
+            <!-- Меню (Левая часть) -->
+            <div class="menu-box">
+                <div class="menu-item"><a href="https://www.wikipedia.org/" target="_blank">кто я</a></div>
+                <div class="menu-item"><a href="https://www.google.com/" target="_blank">где я</a></div>
+                <div class="menu-item"><a href="https://github.com/" target="_blank">связь</a></div>
+            </div>
+
+            <!-- Текст сбоку (Правая часть) -->
+            <div class="right-slogan">
+                моё место в сети Интернет
+            </div>
+        </div>
+
+        <!-- Подвал -->
+        <div class="bottom-text">
+            <p>Если недоступен, пишите на почту</p>
+            <p class="email">dronhardrock@gmail.com</p>
+        </div>
+
+    </div>
+</body>
+</html>
