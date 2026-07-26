@@ -3,7 +3,7 @@
     font-family: 'ZT Neue Relewe';
     /* Если файл шрифта лежит в папке fonts, укажи этот путь */
     src: local('ZT Neue Relewe Regular'),
-         url('https://myschproj.github.io/ZTNeueRalewe-Regular.woff2') format('woff2'),
+         url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2'),
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -54,7 +54,6 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 4px;
 }
 
 /* Текстовый блок - занимает всё свободное место и центрирует текст */
