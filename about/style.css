@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: flex-start; /* Сдвиг контента вверх, для соответствия оригиналу */
     padding-top: 7vh;
-    font-family: 'ZT Neue Relewe';
+    font-family: 'ZT Neue Relewe', 'EB Garamond', Georgia, serif;
     box-sizing: border-box;
 }
 
