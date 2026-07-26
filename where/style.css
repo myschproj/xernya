@@ -58,11 +58,13 @@ body {
 }
 
 .content {
+    flex-grow: 1; /* Растягивается на всю оставшуюся высоту экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрирует текст по вертикали */
     width: 100%;
-    max-width: 800px;
+    padding: 30px 20px;
     text-align: center;
-    padding: 0 20px;
-    margin-top: 40px;
 }
 
 .content p {
