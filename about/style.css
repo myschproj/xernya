@@ -1,0 +1,105 @@
+c/* Подключение кастомного шрифта */
+@font-face {
+    font-family: 'ZT Neue Relewe';
+    /* Если файла шрифта нет, он будет игнорироваться и подтянется резервный EB Garamond */
+    src: url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Сдвиг контента вверх, для соответствия оригиналу */
+    padding-top: 7vh;
+    font-family: 'ZT Neue Relewe';
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 4.5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    color: #000;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 40px auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Убираем возможные обводки или тени, как на оригинале */
+    filter: grayscale(100%); 
+}
+
+.text-content {
+    max-width: 680px;
+    width: 100%;
+    text-align: left; /* Текст выровнен по левому краю */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.description {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+    color: #111;
+}
+
+.description:last-child {
+    margin-bottom: 0;
+}
+
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (Responsive) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+
+    .title {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.2em;
+    }
+    
+    .image-wrapper {
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .text-content {
+        text-align: center; /* На телефонах текст можно центрировать для лучшего вида */
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0 5px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+}
