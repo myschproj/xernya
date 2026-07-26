@@ -30,7 +30,6 @@ body {
     text-align: center;
     padding: 10px 15px;
     /* Ensuring it's at the top of the screen on any device */
-    margin-top: 5vh;
 }
 
 .title {
