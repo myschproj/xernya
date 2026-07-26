@@ -1,0 +1,85 @@
+/* Подключаем шрифт ZT Neue Relewe Regular */
+@font-face {
+    font-family: 'ZT Neue Relewe';
+    /* Если файл шрифта лежит в папке fonts, укажи этот путь */
+    src: local('ZT Neue Relewe Regular'),
+         url('https://myschproj.github.io/ZTNeueRalewe-Regular.woff2') format('woff2'),
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ZT Neue Relewe', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Растягивает страницу на всю высоту экрана */
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Заголовок "Где я?" - прилипает к верху экрана */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 25px 0 15px 0;
+    flex-shrink: 0; /* Чтобы хедер не сжимался */
+}
+
+.title {
+    font-family: 'ZT Neue Relewe', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4rem); /* Адаптивный размер шрифта */
+    font-weight: normal;
+    letter-spacing: 0.03em;
+}
+
+/* Контейнер картинки */
+.image-wrapper {
+    width: 100%;
+    padding: 0 15px;
+    flex-shrink: 0; /* Картинка не сжимается */
+}
+
+.responsive-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Текстовый блок - занимает всё свободное место и центрирует текст */
+.content {
+    flex-grow: 1; /* Растягивается на всю оставшуюся высоту экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрирует текст по вертикали */
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.content p {
+    font-family: 'ZT Neue Relewe', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem); /* Адаптивный размер текста */
+    line-height: 1.6;
+    max-width: 800px;
+    color: #111;
+    margin: 0;
+}
+
+/* Дополнительный отступ для очень маленьких экранов */
+@media (max-height: 600px) {
+    .content {
+        padding: 20px;
+    }
+}
