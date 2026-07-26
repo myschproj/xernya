@@ -1,10 +1,11 @@
 c/* Подключение кастомного шрифта */
 @font-face {
     font-family: 'ZT Neue Relewe';
-    /* Если файла шрифта нет, он будет игнорироваться и подтянется резервный EB Garamond */
-    src: url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2');
+    src: local('ZT Neue Relewe Regular'),
+         url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2'),
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
