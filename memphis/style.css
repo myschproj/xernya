@@ -1,0 +1,82 @@
+/* Подключение кастомного шрифта */
+@font-face {
+    font-family: 'ZT Neue Relewe';
+    /* Если у вас нет файла шрифта, закомментируйте эти строки, 
+       будет использоваться запасной шрифт EB Garamond */
+    src: url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Запасной шрифт указывается на случай отсутствия ZT Neue Relewe */
+    font-family: 'ZT Neue Relewe', 'EB Garamond', Georgia, serif;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    color: #000;
+}
+
+.description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    color: #222;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (Responsive) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.3em;
+    }
+    
+    .description {
+        font-size: 1rem;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .image-wrapper {
+        max-width: 90%;
+    }
+}
