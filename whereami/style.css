@@ -1,7 +1,6 @@
 /* Подключаем шрифт ZT Neue Relewe Regular */
 @font-face {
     font-family: 'ZT Neue Relewe';
-    /* Если файл шрифта лежит в папке fonts, укажи этот путь */
     src: local('ZT Neue Relewe Regular'),
          url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.woff2') format('woff2'),
     font-weight: normal;
