@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'ZT Neue Relewe', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'ZT Neue Relewe';
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Растягивает страницу на всю высоту экрана */
@@ -35,7 +35,7 @@ body {
 }
 
 .title {
-    font-family: 'ZT Neue Relewe', sans-serif;
+    font-family: 'ZT Neue Relewe';
     font-size: clamp(2.5rem, 8vw, 4rem); /* Адаптивный размер шрифта */
     font-weight: normal;
     letter-spacing: 0.03em;
@@ -67,7 +67,7 @@ body {
 }
 
 .content p {
-    font-family: 'ZT Neue Relewe', sans-serif;
+    font-family: 'ZT Neue Relewe';
     font-size: clamp(1rem, 2.5vw, 1.4rem); /* Адаптивный размер текста */
     line-height: 1.6;
     max-width: 800px;
