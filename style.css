@@ -3,7 +3,7 @@
     font-family: 'ZT Neue Relewe';
     /* Если у вас нет файла шрифта, закомментируйте эти строки, 
        будет использоваться запасной шрифт EB Garamond */
-    src: url('https://myschproj.github.io/xernya/ZTNeueRalewe-Regular.ttf') format('ttf');
+    src: url('ZTNeueRalewe-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
